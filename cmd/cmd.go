@@ -39,7 +39,7 @@ var RootCmd = &cobra.Command{
 		if t := cfg.GetPackagesCacheRefreshRate(); t != 0 {
 			ticker := time.NewTicker(t)
 			go func() {
-				for _ = range ticker.C {
+				for range ticker.C {
 					c := cache.Cache
 					for k, v := range c.Items() {
 						if strings.Contains(k, "-request") {
@@ -58,7 +58,7 @@ var RootCmd = &cobra.Command{
 		if t := cfg.GetModelsCacheRefreshRate(); t != 0 {
 			ticker := time.NewTicker(t)
 			go func() {
-				for _ = range ticker.C {
+				for range ticker.C {
 					i, e, _ := cache.Cache.GetWithExpiration("synoModels")
 					if i != nil && time.Now().Add(t).UnixNano() > e.UnixNano() {
 						loggerCmd.Debugf("Models cache expires before next refresh in %s, refreshing", time.Until(e))
