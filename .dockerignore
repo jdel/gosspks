@@ -1,0 +1,8 @@
+tmp
+vendor
+cache
+packages
+.vscode
+gin-bin
+debug
+gosspks

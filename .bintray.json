@@ -1,0 +1,25 @@
+{
+    "package": {
+        "name": "master",
+        "repo": "gosspks",
+        "subject": "jdel",
+        "desc": "Automated build from master",
+        "issue_tracker_url": "https://github.com/jdel/gosspks/issues",
+        "vcs_url": "https://github.com/jdel/gosspks",
+        "licenses": ["GPL-3.0"]
+    },
+
+    "version": {
+        "name": "master",
+        "desc": "Automated build from master",
+        "gpgSign": false
+    },
+
+    "files":
+        [{"includePattern": "out/(.*)", "uploadPattern": "$1", 
+            "matrixParams": {
+                "override": 1 
+            }
+        }],
+    "publish": true
+}

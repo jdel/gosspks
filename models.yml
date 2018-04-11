@@ -1,0 +1,882 @@
+- name: FS1018
+  cpu: Intel Pentium D1508
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 SO-DIMM 8GB
+- name: RS2818RP+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4-2133 Non-ECC UDIMM 4GB
+- name: RS818+/RS818RP+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2GB
+- name: DS3018xs
+  cpu: Intel Pentium D1508
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 SO-DIMM 8GB
+- name: DS918+
+  cpu: Intel Celeron J3455
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 4GB
+- name: DS718+
+  cpu: Intel Celeron J3455
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS418play
+  cpu: Intel Celeron J3355
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS418
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 2GB
+- name: DS418j
+  cpu: Realtek RTD1293
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: DS218+
+  cpu: Intel Celeron J3355
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS218play
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: DS218
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 2GB
+- name: DS218j
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512MB
+- name: DS118
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: FS3017
+  cpu: Intel Xeon E5-2620 v3 x 2
+  cores: Six Core x 2
+  threads: 12 x 2
+  fpu: "Yes"
+  arch: Grantley
+  ram: DDR4 ECC RDIMM 64 GB
+- name: FS2017
+  cpu: Intel Xeon D-1541
+  cores: Eight Core
+  threads: "16"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC RDIMM 16 GB
+- name: RS18017xs+
+  cpu: Intel Xeon D-1531
+  cores: Six Core
+  threads: "12"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC RDIMM 16 GB
+- name: RS4017xs+
+  cpu: Intel Xeon D-1541
+  cores: Eight Core
+  threads: "16"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC UDIMM 8 GB
+- name: RS3617xs+
+  cpu: Intel Xeon D-1531
+  cores: Six Core
+  threads: "12"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC UDIMM 8 GB
+- name: RS3617RPxs
+  cpu: Intel Xeon D-1521
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC UDIMM 8 GB
+- name: RS3617xs
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 4 GB
+- name: RS217
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512 MB
+- name: DS3617xs
+  cpu: Intel Xeon D-1527
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC SO-DIMM 16 GB
+- name: DS1817+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2/8 GB
+- name: DS1817
+  cpu: Annapurna Labs Alpine AL-314
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Alpine
+  ram: DDR3L 4GB
+- name: DS1517+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2/8 GB
+- name: DS1517
+  cpu: Annapurna Labs Alpine AL-314
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Alpine
+  ram: DDR3L 2GB
+- name: RS18016xs+
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 8 GB
+- name: RS2416+/RS2416RP+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: RS816
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 1 GB
+- name: DS916+
+  cpu: Intel Pentium N3710
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 2 / 8 GB
+- name: DS716+II
+  cpu: Intel Celeron N3160
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 2 GB
+- name: DS716+
+  cpu: Intel Celeron N3150
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 2 GB
+- name: DS416play
+  cpu: Intel Celeron N3060
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 1 GB
+- name: DS416
+  cpu: Annapurna Labs Alpine AL-212
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Alpine4k
+  ram: DDR3 1 GB
+- name: DS416j
+  cpu: Marvell Armada 388 88F6828
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512 MB
+- name: DS416slim
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512 MB
+- name: DS216+II
+  cpu: Intel Celeron N3060
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 1 GB
+- name: DS216+
+  cpu: Intel Celeron N3050
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Braswell
+  ram: DDR3 1 GB
+- name: DS216play
+  cpu: STM STiH412
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Monaco
+  ram: DDR3 1 GB
+- name: DS216
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512 MB
+- name: DS216j
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512 MB
+- name: DS216se
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 256 MB
+- name: DS116
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 1 GB
+- name: RS815+/RS815RP+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: RS815
+  cpu: Marvell Armada XP MV78230
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armadaxp
+  ram: DDR3 1 GB
+- name: RC18015xs+
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 8 GB
+- name: DS3615xs
+  cpu: Intel Core i3-4130
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 4 GB
+- name: DS2415+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: DS2015xs
+  cpu: Annapurna Labs Alpine AL-514
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Alpine
+  ram: DDR3 4 GB
+- name: DS1815+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: DS1515+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: DS1515
+  cpu: Annapurna Labs Alpine AL-314
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Alpine
+  ram: DDR3 2 GB
+- name: DS715
+  cpu: Annapurna Labs Alpine AL-314
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Alpine
+  ram: DDR3 2 GB
+- name: DS415+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2 GB
+- name: DS415play
+  cpu: Intel Atom CE5335
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Evansport
+  ram: DDR3 1 GB
+- name: DS215+
+  cpu: Annapurna Labs Alpine AL-212
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Alpine4k
+  ram: DDR3 1 GB
+- name: DS215j
+  cpu: Marvell Armada 375 88F6720
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada375
+  ram: DDR3 512 MB
+- name: DS115
+  cpu: Marvell Armada 375 88F6720
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada375
+  ram: DDR3 512 MB
+- name: DS115j
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 256 MB
+- name: RS3614xs+
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 8 GB
+- name: RS3614xs/RS3614RPxs
+  cpu: Intel Core i3-4130
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 4 GB
+- name: RS2414+/RS2414RP+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 2 GB
+- name: RS814+/RS814RP+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 2 GB
+- name: RS814
+  cpu: Marvell Armada XP MV78230
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armadaxp
+  ram: DDR3 1 GB
+- name: RS214
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 512 MB
+- name: DS414
+  cpu: Marvell Armada XP MV78230
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armadaxp
+  ram: DDR3 1 GB
+- name: DS414j
+  cpu: Mindspeed Comcerto C2000
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Comcerto2k
+  ram: DDR3 512 MB
+- name: DS414slim
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 512 MB
+- name: DS214+
+  cpu: Marvell Armada XP MV78230
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armadaxp
+  ram: DDR3 1 GB
+- name: DS214play
+  cpu: Intel Atom CE5335
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Evansport
+  ram: DDR3 1 GB
+- name: DS214
+  cpu: Marvell Armada XP MV78230
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armadaxp
+  ram: DDR3 512 MB
+- name: DS214se
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 256 MB
+- name: DS114
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 512 MB
+- name: RS10613xs+
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 8 GB
+- name: RS3413xs+
+  cpu: Intel Xeon E3-1230 v2
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 8 GB
+- name: DS2413+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 2 GB
+- name: DS1813+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 2 GB
+- name: DS1513+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 2 GB
+- name: DS713+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: DS413
+  cpu: Freescale P1022
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Qoriq
+  ram: DDR3 1 GB
+- name: DS413j
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS213+
+  cpu: Freescale P1022
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Qoriq
+  ram: DDR3 512 MB
+- name: DS213
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS213air
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS213j
+  cpu: Marvell Armada 370 88F6707
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Armada370
+  ram: DDR3 512 MB
+- name: RS3412xs/RS3412RPxs
+  cpu: Intel Core i3-2100
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 2 GB
+- name: RS2212+/RS2212RP+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: RS812+/RS812RP+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: RS812
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: RS212
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS3612xs
+  cpu: Intel Core i3-2100
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 2 GB
+- name: DS1812+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: DS1512+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: DS712+
+  cpu: Intel Atom D425
+  cores: Single Core
+  threads: "2"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR3 1 GB
+- name: DS412+
+  cpu: Intel Atom D2700
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Cedarview
+  ram: DDR3 1 GB
+- name: DS212+
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS212
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS212j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 256 MB
+- name: DS112+
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS112
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS112j
+  cpu: Marvell Kirkwood 88F6702
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB
+- name: RS3411xs/RS3411RPxs
+  cpu: Intel Core i3-2100
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 2 GB
+- name: RS2211+/RS2211RP+
+  cpu: Intel Atom D525
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: RS411
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS3611xs
+  cpu: Intel Core i3-2100
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Bromolow
+  ram: DDR3 ECC 2 GB
+- name: DS2411+
+  cpu: Intel Atom D525
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS1511+
+  cpu: Intel Atom D525
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS411+II
+  cpu: Intel Atom D525
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS411+
+  cpu: Intel Atom D510
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS411
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS411j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB
+- name: DS411slim
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS211+
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 512 MB
+- name: DS211
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: DS211j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB
+- name: DS111
+  cpu: Marvell Kirkwood 88F6282
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR3 256 MB
+- name: RS810+/RS810RP+
+  cpu: Intel Atom D510
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS1010+
+  cpu: Intel Atom D510
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS710+
+  cpu: Intel Atom D410
+  cores: Single Core
+  threads: "2"
+  fpu: "Yes"
+  arch: X86
+  ram: DDR2 1 GB
+- name: DS410
+  cpu: Freescale MPC8533E
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Ppc853x
+  ram: DDR 512 MB
+- name: DS410j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB
+- name: DS210+
+  cpu: Freescale MPC8533E
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Ppc853x
+  ram: DDR 512 MB
+- name: DS210j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB
+- name: DS110+
+  cpu: Freescale MPC8533E
+  cores: Single Core
+  threads: "1"
+  fpu: "Yes"
+  arch: Ppc853x
+  ram: DDR 512 MB
+- name: DS110j
+  cpu: Marvell Kirkwood 88F6281
+  cores: Single Core
+  threads: "1"
+  fpu: "No"
+  arch: 88f628x
+  ram: DDR2 128 MB

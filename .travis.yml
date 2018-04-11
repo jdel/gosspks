@@ -1,0 +1,49 @@
+language: go
+go:
+- 1.9
+install:
+- go get -v github.com/golang/dep/cmd/dep
+- go get -v github.com/codeclimate/test-reporter
+- go get -v github.com/mitchellh/gox
+- cd $GOPATH/src/github.com/golang/dep/cmd/dep && git checkout tags/v0.4.1 && go install
+- cd $GOPATH/src/github.com/codeclimate/test-reporter && git checkout tags/v0.4.3 && go install
+- cd $GOPATH/src/github.com/jdel/gosspks
+- dep ensure -v -vendor-only
+before_script:
+- test-reporter before-build
+script:
+- go test -v -coverprofile c.out -coverpkg ./...
+- gox -osarch="linux/386 linux/amd64 linux/arm darwin/amd64 darwin/386 windows/amd64 windows/386" -output="out/{{.Dir}}-{{.OS}}-{{.Arch}}" -ldflags "-X github.com/jdel/gosspks/cfg.Version=$TRAVIS_TAG"
+after_script:
+- test-reporter after-build --coverage-input-type gocov --exit-code $TRAVIS_TEST_RESULT
+deploy:
+- provider: releases
+  overwrite: true
+  api_key:
+    secure: DsqlZFCRRHp3Xits4DoedqfDl8oR6oVYxlTb/bA3rSW2GqkokPSO39PCSLOhyxnvugtkCKGS/SvL5tz09QSm2JKfNKIMheCWZwldz9ZYc6XYQxPkM6lRm8XOyy4eWy7lUx9P988dIaaa8k8ebNUHe0VQhlu44jrUYXLqRnDK2Af95t0x1orctjyzM5T/kbWi/9qTj+MEd+ROzGMRIvna7ZdFfPqvPS7jgYHGx427SsqAnOEvvNONb/KR3EEPwnv/viXRi+7GygGgI79RQGd4v0c1/BxGeWF7MrldZpMoLjOFYgN84nK4gZeLZ7yyF15DAVtLOm+njE5ZL7gbu/6SFDi7TCQ1ph4OSBR+iXMUyBT0b8YsW80NAGV2mYz7Ybet7VrP0g2xOSrUqHpn0F0wv4VMagcN4TqbJosv1W23XZLa3QekRj3Tc5zDi/Gu6bhap+hvIF5tZ6ZiITK7jYukZa1isAjRGomQU+yl0k3/NfbTO8U1d9WEOueUrwXxx9jwMYIpYqzbZxCavoOnsKkyEFqTz6OnW8iRQjXJxbnZXLHFTLsZ15pXERsxseaOJzHCn6e2MOpyu9KR0MwQTzNqQ2BP3swcnSYHQq0b5bf+5HhEfi0lBrpEtCBIH+p3CWlFTzT//TKnZhvM2co9DiqPpt5Y3DayDTwLKDhG2/FX7tI=
+  file:
+  - out/gosspks-darwin-386
+  - out/gosspks-darwin-amd64
+  - out/gosspks-linux-386
+  - out/gosspks-linux-amd64
+  - out/gosspks-linux-arm
+  - out/gosspks-windows-386.exe
+  - out/gosspks-windows-amd64.exe
+  skip_cleanup: true
+  on:
+    repo: jdel/gosspks
+    tags: true
+- provider: bintray
+  file: .bintray.json
+  user: jdel
+  key:
+    secure: dStLPikbyz5/Y7xxdgFBU2Ca5Vc+RCppGPlUX16kAvSkH1vAZbiwXt4clrStdg5Sb+rcu4wRvccB67mFGOTCybzckxNFM0uQ9qB6SQJpmu/Irwz9JyiWlY//WY8HSdhlPPqQtiAUeIzZLyvbkztlYqSGiswDZ4rT7oGFzhtQOyr52OWIs3vUZm6DEvPknzVmV6CkYQ66DthK9gpHE4WEGLPv2Jq4zlXClxGvr80rdYKsmAOI2uslOHbIWmdCcBTRTLa9Pv8MY8b5NPgO3RuM4sBXdKdIq/JP2X8qt4BGdrLU46v/IroXnz0QS07q9XOPeTvQ7GM0KiaBost5wvd77elY82sYQ8ii12/7Vb3hefzwcxY3mWr+2WmaLr+pTZrxnlJffJQtnuTFilSPRjVVKQfrMUVzVyQGKaWjWukjhsRxbeyl3nx7eLVsem8aM2I6PZD8exsduq9smsaqDkBvStqvF7DgKe+Gvnzv8Mo2KKMH0TKOY7XaHkx+QN6GwJ0GWl/O9Mhj2MOJt7SvsT2NBQmK/1c45WsAuDj7AQ9MVxcKpWX6Cz7EYVfN8NTEFknDNiVHVy7uylZzkROtzHiR0hdJuYgc5If8eanZEX2F/F0BlXBqInuJkoKxRxXg8aY5IhvT+Lh8hPX4d5j7cVfK521sxJ+QgB1E6eu+wcnaxes=
+  on:
+    repo: jdel/gosspks
+    branch: master
+notifications:
+  slack:
+    secure: roUfLYvdO1i7NDMhxzUXtzTSK4xGbpdnUO86h9Oa84PEFZbo4zrya/zevoA+mmuWOf/Wvl5crvv+0KSFcijNrwqJbzdY0Oc55JwQlel+fnoa6OBFXgSoVa0lmdFwcJN9sCHOMFfpVluCriSn7Hc1W8uFutNRUsmEiZlgN8K+Fis79D2ousXQS0ZtmxGX6Va+pyoWuW0HLHdbEtFJRdPz0BW+N5WkTmKuCvkmZgEtCRl+fYn1Bo/4y2rj+HSCEaYtihpmD1MDgxVFwc2rWfZRE5zCJowTgkHKrGOHZ3A7blyZgrrb2I9SwLqk0khSjys5GqNiqfOD7Ocp0Xjj6UWl5W3qRXbvgXNx4Vje3jR5vJJxl2NXl8iPeXVPc7GBi9MpX024kF4ZSwfecJ6gaRG2mGmukbgVa1x/RI6624szujgO2DNZCZ3Tp1mLKuj4wwik3+8EJ3MEX+MBk0f5SJNyumL6vTNICkaH5iRKajlJ4MLfIs6g5kIZftOP6sTruLtCIytajPhebVSEbfXx9XiKNR1WKNYvoXXR1uXJ3o04f9SQlLBblBIcXokSb2yNZyzzlZSLJztcR+VvHZs9bjCYKGHEJxsu3FBt7RC0dBCWGEYqvfo94rT8ypZ4nJTQfrTyPAyHUvpKDmu2dgZdIp5wtvtL7Lz+sfhtlW0x6Pw5f+4=
+env:
+  global:
+    - secure: wKuKRZLlkTRbVULX9yvB1ipIBv8qtd2udJ5yXf+iI6q4jyb+MKUxLz2nYlG+95ZH10JeCCPFewkDROUIz9hHhPb8m7OdB7Q3/dQd2eSItaRlhaWNGKoVJKHfwV98P8s5Kq/0TJS2QXjuBQrhoTHtJOOC/V/NmzPUTyWecpXliSL3jm15XPi3MlG/ttd10MrqZ0zYbnyv7bG7sLuOIrKat63Wt/6pm9ftILNCfSV07jm5zHy0a/GyolsksnK5HE/+r56LAlXlxaXmev3exqd+oxTlq1r0S8GBBJJZmgXsQvvmCu+prsTeg0xHgE4Rm72SGdTktxbj+d09MACFsQ1KCrPSSIInooLXKvivD6wo35Q/94pPyxnmZvB0NtjI3Oj2ttcIF2us39pQwYQP+Bw+bX5Set36lnOZKWAUzzCi183vCDByJNHw3LX6N0s2d32zZ872HRPNGvddnBz0wU5vcaljajh/1Gtl0akiJLDYPS/lJddDkI2mvPgfW2T8Gt9LTLQsjSYM4e/sIvOn44elJ0H0TbLG7915F+bBKUgkH1xN6I4gKKYqemzW/HGyfdqPW+vBnZrFJm0u5ny83rbAsi5Zofk9dv7SgTZGnKMa29jKvjv9RaRnc8GbglqxeIZtFM/gEX5Jkg6g38SBB0ke+kchl6lI/LLe0G/QoZ8pDJc=
