@@ -76,9 +76,11 @@ func InitConfig(cfgFile string, homeDir string) {
 		if err := ioutil.WriteFile(configFileToWrite, settings, 0644); err != nil {
 			loggerCfg.Error(err)
 		}
-	} else {
-		loggerCfg.Info("Using config file: ", viper.ConfigFileUsed())
 	}
+
+	logLevel := parseLogLevel(GetLogLevel())
+	log.SetLevel(logLevel)
+	loggerCfg.Info("Using config file: ", viper.ConfigFileUsed())
 
 	// Create directories
 	cacheDir := GetCacheDir()
@@ -118,9 +120,6 @@ func InitConfig(cfgFile string, homeDir string) {
 		logLevel := parseLogLevel(GetLogLevel())
 		log.SetLevel(logLevel)
 	})
-
-	logLevel := parseLogLevel(GetLogLevel())
-	log.SetLevel(logLevel)
 }
 
 func parseLogLevel(level string) log.Level {

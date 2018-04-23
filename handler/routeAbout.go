@@ -27,7 +27,7 @@ func RouteAbout(w http.ResponseWriter, r *http.Request) {
 		cfg.Version,
 		"jdel",
 		"GNU GPL v3",
-		2017,
+		2018,
 	}
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")

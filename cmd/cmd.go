@@ -87,8 +87,8 @@ func Execute() {
 func init() {
 	// CMD line args > ENV VARS > Config file
 	cobra.OnInitialize(func() { cfg.InitConfig(cfgFile, goSSPKSHome) })
-	RootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "C", "", "config file (default is $HOME/.gosspks/config.yml)")
-	RootCmd.PersistentFlags().StringVarP(&goSSPKSHome, "home", "H", "", "gosspks home (default is $HOME/.gosspks/")
+	RootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "C", "", "config file (default is $HOME/gosspks/config.yml)")
+	RootCmd.PersistentFlags().StringVarP(&goSSPKSHome, "home", "H", "", "gosspks home (default is $HOME/gosspks/")
 	// Optional flags
 	RootCmd.PersistentFlags().IntP("port", "p", 8080, "port to listen to")
 	RootCmd.PersistentFlags().BoolP("debug-package", "d", false, "generates a debug package visible in Synology Package Center")
@@ -98,7 +98,7 @@ func init() {
 	RootCmd.PersistentFlags().String("packages-cache-duration", "5m", "packages in-memory cache TTL")
 	RootCmd.PersistentFlags().String("models-cache-duration", "7d", "models in-memory cache TTL")
 	RootCmd.PersistentFlags().String("packages-cache-refresh", "1m", "packages in-memory cache automatic refresh rate")
-	RootCmd.PersistentFlags().String("models-cache-refresh", "", "models in-memory cache automatic refresh rate")
+	RootCmd.PersistentFlags().String("models-cache-refresh", "1d", "models in-memory cache automatic refresh rate")
 	RootCmd.PersistentFlags().String("models", "models.yml", "models file")
 	RootCmd.PersistentFlags().String("hostname", "", "hostname to use when generating urls")
 	RootCmd.PersistentFlags().String("scheme", "http", "scheme to use when generating urls")
