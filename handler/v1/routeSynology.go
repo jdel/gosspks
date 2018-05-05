@@ -21,7 +21,6 @@ var loggerSynology = log.WithFields(log.Fields{
 func RouteSynology(w http.ResponseWriter, r *http.Request) {
 	var synoPkgs syno.Packages
 	var err error
-	var scheme = getScheme(r)
 	var paramLanguage,
 		paramTimezone,
 		paramUnique,
@@ -89,6 +88,16 @@ func RouteSynology(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if cfg.GetDebugPackage() == true {
+		hostname := cfg.GetHostName()
+		if hostname == "" {
+			hostname = r.Host
+		}
+
+		scheme := cfg.GetScheme()
+		if scheme == "" {
+			scheme = getScheme(r)
+		}
+
 		debug := syno.NewDebugPackage(fmt.Sprintf(
 			// This string cannot be made multiline with backticks
 			// because raw string literal is UTF-8 encoded
@@ -105,8 +114,9 @@ func RouteSynology(w http.ResponseWriter, r *http.Request) {
 			paramLanguage,
 			paramUnique))
 		debug.Thumbnail = append(debug.Thumbnail, fmt.Sprintf(
-			"%s://%s/%s/debug.png",
-			scheme, cfg.GetStaticPrefix(), r.Host))
+			"%s://%s%s/debug.png",
+			// "%s://%s/%sdebug.png",
+			scheme, hostname, cfg.GetStaticPrefix()))
 		synoPkgs = append(synoPkgs, debug)
 	}
 
