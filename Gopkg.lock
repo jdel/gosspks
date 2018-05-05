@@ -80,7 +80,7 @@
   branch = "master"
   name = "github.com/jdel/go-syno"
   packages = ["."]
-  revision = "e55833f250540fcf7fbd2a40a686713035dde1a5"
+  revision = "13a259d30c894a245e9e2cd2c8a56151ee2434fa"
 
 [[projects]]
   branch = "master"
