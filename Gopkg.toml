@@ -19,8 +19,8 @@
   version = "1.4.0"
 
 [[constraint]]
-  branch = "master"
   name = "github.com/jdel/go-syno"
+  version = "0.2"
 
 [[constraint]]
   name = "github.com/patrickmn/go-cache"
