@@ -269,6 +269,24 @@ func GetGPGKeys() []string {
 	return viper.GetStringSlice("gosspks.gpg")
 }
 
+// GetAllowedOrigins returns a []string of CORS allowed origins
+// allowed origins have to be specified as an array in the config file
+func GetAllowedOrigins() []string {
+	return viper.GetStringSlice("gosspks.cors.allowed-origins")
+}
+
+// GetAllowedMethods returns a []string of CORS allowed methods
+// allowed methods have to be specified as an array in the config file
+func GetAllowedMethods() []string {
+	return viper.GetStringSlice("gosspks.cors.allowed-methods")
+}
+
+// GetAllowedHeaders returns a []string of CORS allowed headers
+// allowed headers have to be specified as an array in the config file
+func GetAllowedHeaders() []string {
+	return viper.GetStringSlice("gosspks.cors.allowed-headers")
+}
+
 // Prefixes a string with / if the string
 // doesn't start with /
 func addSlashPrefix(value string) string {

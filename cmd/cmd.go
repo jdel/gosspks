@@ -31,9 +31,9 @@ var RootCmd = &cobra.Command{
 	Long:  `Serving your Synology Packages.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		router := rtr.NewRouter()
-		allowedOrigins := handlers.AllowedOrigins([]string{"*"})
-		allowedMethods := handlers.AllowedMethods([]string{"GET", "HEAD", "OPTIONS"})
-		allowedHeaders := handlers.AllowedHeaders([]string{"Accept", "Accept-Language", "Content-Language", "Origin", "X-Requested-With"})
+		allowedOrigins := handlers.AllowedOrigins(cfg.GetAllowedOrigins())
+		allowedMethods := handlers.AllowedMethods(cfg.GetAllowedMethods())
+		allowedHeaders := handlers.AllowedHeaders(cfg.GetAllowedHeaders())
 		corsHandler := handlers.CORS(allowedOrigins, allowedMethods, allowedHeaders)
 
 		if t := cfg.GetPackagesCacheRefreshRate(); t != 0 {
@@ -105,6 +105,9 @@ func init() {
 	RootCmd.PersistentFlags().StringP("log-level", "l", "Error", "log level [Error,Warn,Info,Debug]")
 	RootCmd.PersistentFlags().String("static", "static", "prefix to serve static images")
 	RootCmd.PersistentFlags().String("download", "download", "prefix to serve packages")
+	RootCmd.PersistentFlags().String("allowed-origins", "*", "CORS allowed origins")
+	RootCmd.PersistentFlags().String("allowed-methods", "GET,HEAD,OPTIONS", "CORS allowed methods")
+	RootCmd.PersistentFlags().String("allowed-headers", "Accept,Accept-Language,Content-Language,Origin,X-Requested-With", "CORS allowed headers")
 	RootCmd.PersistentFlags().Bool("md5", false, "enable md5 calculation")
 	// Bind flags to config
 	viper.BindPFlag("gosspks.port", RootCmd.PersistentFlags().Lookup("port"))
@@ -122,6 +125,9 @@ func init() {
 	viper.BindPFlag("gosspks.log-level", RootCmd.PersistentFlags().Lookup("log-level"))
 	viper.BindPFlag("gosspks.router.static", RootCmd.PersistentFlags().Lookup("static"))
 	viper.BindPFlag("gosspks.router.download", RootCmd.PersistentFlags().Lookup("download"))
+	viper.BindPFlag("gosspks.cors.allowed-origins", RootCmd.PersistentFlags().Lookup("allowed-origins"))
+	viper.BindPFlag("gosspks.cors.allowed-methods", RootCmd.PersistentFlags().Lookup("allowed-methods"))
+	viper.BindPFlag("gosspks.cors.allowed-headers", RootCmd.PersistentFlags().Lookup("allowed-headers"))
 	viper.BindPFlag("gosspks.md5", RootCmd.PersistentFlags().Lookup("md5"))
 	viper.AutomaticEnv()
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))

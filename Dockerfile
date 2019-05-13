@@ -9,16 +9,18 @@ LABEL maintainer=julien@del-piccolo.com
 
 USER root
 
+COPY . ${GOPATH}/src/github.com/jdel/gosspks
+
 RUN apk add --update curl \
  && apk add --virtual build-dependencies go gcc build-base glide git openssh-client \
  && adduser gosspks -D \
  && mkdir -p /home/user/gosspks/packages /home/user/gosspks/cache \
  && chown -R user:user /tmp /home/user \
- && curl -sL https://github.com/jdel/gosspks/archive/${GOSSPKS_VERSION}.zip -o gosspks.zip \
- && mkdir -p ${GOPATH}/src/github.com/jdel/ \
- && unzip gosspks.zip -d ${GOPATH}/src/github.com/jdel/ \
- && rm -f gosspks.zip \
- && mv ${GOPATH}/src/github.com/jdel/gosspks-* ${GOPATH}/src/github.com/jdel/gosspks \
+#  && curl -sL https://github.com/jdel/gosspks/archive/${GOSSPKS_VERSION}.zip -o gosspks.zip \
+#  && mkdir -p ${GOPATH}/src/github.com/jdel/ \
+#  && unzip gosspks.zip -d ${GOPATH}/src/github.com/jdel/ \
+#  && rm -f gosspks.zip \
+#  && mv ${GOPATH}/src/github.com/jdel/gosspks-* ${GOPATH}/src/github.com/jdel/gosspks \
  && go get -v github.com/golang/dep/cmd/dep \
  && cd $GOPATH/src/github.com/golang/dep/cmd/dep \
  && git checkout tags/v0.4.1 && go install \
