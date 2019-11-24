@@ -3,8 +3,8 @@ package rtr
 import (
 	"net/http"
 
-	"github.com/jdel/gosspks/handler"
-	"github.com/jdel/gosspks/handler/v1"
+	"jdel.org/gosspks/handler"
+	"jdel.org/gosspks/handler/v1"
 )
 
 type route struct {

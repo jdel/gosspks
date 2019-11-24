@@ -1,11 +1,12 @@
 package handler
 
 import (
+	"time"
 	"encoding/json"
 	"net/http"
 
-	"github.com/jdel/gosspks/cfg"
-	"github.com/jdel/gosspks/util"
+	"jdel.org/gosspks/cfg"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -21,13 +22,13 @@ func RouteAbout(w http.ResponseWriter, r *http.Request) {
 		Version    string `json:"version"`
 		Maintainer string `json:"maintainer"`
 		License    string `json:"license"`
-		Year       uint   `json:"year"`
+		Year       int    `json:"year"`
 	}{
 		"gosspks",
 		cfg.Version,
 		"jdel",
 		"GNU GPL v3",
-		2018,
+		time.Now().Year(),
 	}
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")

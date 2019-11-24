@@ -14,17 +14,17 @@ RUN apk add --update curl \
  && adduser gosspks -D \
  && mkdir -p /home/user/gosspks/packages /home/user/gosspks/cache \
  && chown -R user:user /tmp /home/user \
- && curl -sL https://github.com/jdel/gosspks/archive/${GOSSPKS_VERSION}.zip -o gosspks.zip \
+ && curl -sL https://jdel.org/gosspks/archive/${GOSSPKS_VERSION}.zip -o gosspks.zip \
  && mkdir -p ${GOPATH}/src/github.com/jdel/ \
  && unzip gosspks.zip -d ${GOPATH}/src/github.com/jdel/ \
  && rm -f gosspks.zip \
- && mv ${GOPATH}/src/github.com/jdel/gosspks-* ${GOPATH}/src/github.com/jdel/gosspks \
+ && mv ${GOPATH}/src/jdel.org/gosspks-* ${GOPATH}/src/jdel.org/gosspks \
  && go get -v github.com/golang/dep/cmd/dep \
  && cd $GOPATH/src/github.com/golang/dep/cmd/dep \
  && git checkout tags/v0.4.1 && go install \
- && cd ${GOPATH}/src/github.com/jdel/gosspks/ \
+ && cd ${GOPATH}/src/jdel.org/gosspks/ \
  && dep ensure -v -vendor-only \
- && go build -o /usr/local/bin/gosspks -ldflags "-X github.com/jdel/gosspks/cfg.Version=${GOSSPKS_VERSION}-${GOSSPKS_COMMIT}" \
+ && go build -o /usr/local/bin/gosspks -ldflags "-X jdel.org/gosspks/cfg.Version=${GOSSPKS_VERSION}-${GOSSPKS_COMMIT}" \
  && apk del build-dependencies \
  && rm -rf /var/cache/apk/* \
  && rm -rf /root/.glide/ \

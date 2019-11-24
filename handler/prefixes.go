@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/jdel/gosspks/cfg"
+	"jdel.org/gosspks/cfg"
 )
 
 // PrefixStatic serves anything under /static/

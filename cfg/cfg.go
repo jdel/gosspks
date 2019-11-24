@@ -11,10 +11,10 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/jdel/go-syno"
-	"github.com/jdel/gosspks/cache"
-	"github.com/jdel/gosspks/stc"
-	"github.com/jdel/gosspks/util"
+	"jdel.org/go-syno"
+	"jdel.org/gosspks/cache"
+	"jdel.org/gosspks/stc"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
@@ -22,7 +22,7 @@ import (
 
 // Version is the current application version.
 // This variable is populated when building the binary with:
-// -ldflags "-X github.com/jdel/gosspks/cfg.Version=${VERSION}"
+// -ldflags "-X jdel.org/gosspks/cfg.Version=${VERSION}"
 var Version string
 
 // SynoOptions provides options for go-syno library

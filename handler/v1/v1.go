@@ -11,10 +11,10 @@ import (
 	"time"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/jdel/go-syno"
-	"github.com/jdel/gosspks/cache"
-	"github.com/jdel/gosspks/cfg"
-	"github.com/jdel/gosspks/util"
+	"jdel.org/go-syno"
+	"jdel.org/gosspks/cache"
+	"jdel.org/gosspks/cfg"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -63,6 +63,9 @@ func buildFromFiles(r *http.Request, files []os.FileInfo) (syno.Packages, error)
 			if filepath.Ext(filename) == ".spk" {
 				newSynoPkg, err := syno.NewPackage(filename)
 				if err != nil {
+					loggerV1.WithFields(log.Fields{
+						"filename": filename,
+					}).Debug(err)
 					return
 				}
 				hostname := cfg.GetHostName()

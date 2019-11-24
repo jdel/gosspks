@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/jdel/gosspks/cfg"
+	"jdel.org/gosspks/cfg"
 	"github.com/spf13/cobra"
 )
 

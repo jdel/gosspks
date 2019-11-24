@@ -5,8 +5,8 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/jdel/gosspks/lgr"
-	"github.com/jdel/gosspks/util"
+	"jdel.org/gosspks/lgr"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 

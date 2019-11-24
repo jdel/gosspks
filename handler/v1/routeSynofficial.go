@@ -7,9 +7,9 @@ import (
 	"sort"
 
 	"github.com/gorilla/mux"
-	"github.com/jdel/go-syno"
-	"github.com/jdel/gosspks/cfg"
-	"github.com/jdel/gosspks/util"
+	"jdel.org/go-syno"
+	"jdel.org/gosspks/cfg"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 

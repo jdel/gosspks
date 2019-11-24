@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/jdel/gosspks/util"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 

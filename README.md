@@ -1,8 +1,8 @@
 # gosspks: A Go SPK Server for Synology NAS 
 
 [![Travis](https://img.shields.io/travis/jdel/gosspks.svg)](https://travis-ci.org/jdel/gosspks)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/jdel/gosspks)
-[![GoReport](https://goreportcard.com/badge/github.com/jdel/go-syno)](https://goreportcard.com/report/github.com/jdel/gosspks)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/jdel.org/gosspks)
+[![GoReport](https://goreportcard.com/badge/github.com/jdel/go-syno)](https://goreportcard.com/report/jdel.org/gosspks)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/jdel/gosspks.svg)](https://codeclimate.com/github/jdel/gosspks/maintainability)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/jdel/gosspks.svg)](https://codeclimate.com/github/jdel/gosspks/test_coverage)
 [![Dependencies](https://tidelift.com/badges/github/jdel/gosspks?style=flat)](https://tidelift.com/repo/github/jdel/gosspks)
@@ -19,7 +19,7 @@ gosspks is provided as a single statically linked binary for darwin (x86, amd64)
 
 Only the linux-amd64 is extensively tested by myself.
 
-Tagged releases are in the [Releases Page](https://github.com/jdel/gosspks/releases) while the latest build from master is avilable on [Bintray](https://bintray.com/jdel/gosspks/master/master#files).
+Tagged releases are in the [Releases Page](https://jdel.org/gosspks/releases) while the latest build from master is avilable on [Bintray](https://bintray.com/jdel/gosspks/master/master#files).
 
 To install, simply run:
 
@@ -210,7 +210,7 @@ It is possible to bypass completely the home directory by specifying the config 
 
 ## Ok, but, I want a web UI !
 
-Right, there is [gosspks-ui](https://github.com/jdel/gosspks-ui), a React UI, but there is no real documentation yet, 
+Right, there is [gosspks-ui](https://jdel.org/gosspks-ui), a React UI, but there is no real documentation yet, 
 
 A Docker image is available, you can run the followinf `docker-compose.yml` file through `docker-compose up -d` or `docker stack deploy -c docker-compose.yml gosspks`:
 

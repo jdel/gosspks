@@ -3,8 +3,8 @@ package rtr
 import (
 	"net/http"
 
-	"github.com/jdel/gosspks/cfg"
-	"github.com/jdel/gosspks/handler"
+	"jdel.org/gosspks/cfg"
+	"jdel.org/gosspks/handler"
 )
 
 type pathPrefix struct {

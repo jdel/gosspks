@@ -1,7 +1,7 @@
 package lgr
 
 import (
-	"github.com/jdel/gosspks/util"
+	"jdel.org/gosspks/util"
 	log "github.com/sirupsen/logrus"
 )
 
