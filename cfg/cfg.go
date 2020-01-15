@@ -1,4 +1,4 @@
-package cfg
+package cfg // import jdel.org/gosspks/cfg
 
 import (
 	"encoding/base64"

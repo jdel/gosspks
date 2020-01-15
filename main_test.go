@@ -1,4 +1,4 @@
-package main
+package main // import jdel.org/gosspks/main
 
 import (
 	"testing"

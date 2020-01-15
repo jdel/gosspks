@@ -1,4 +1,4 @@
-package rtr
+package rtr // import jdel.org/gosspks/rtr
 
 import (
 	"net/http"

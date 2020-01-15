@@ -1,4 +1,4 @@
-package stc
+package stc // import jdel.org/gosspks/stc
 
 // DebugPackagePng is the base64 encoding of the
 // debug package png icon

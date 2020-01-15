@@ -1,6 +1,5 @@
 tmp
 vendor
-cache
 packages
 .vscode
 gin-bin

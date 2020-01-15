@@ -1,101 +1,17 @@
-- name: FS1018
-  cpu: Intel Pentium D1508
-  cores: Dual Core
-  threads: "4"
+- name: FS6400
+  cpu: Intel Xeon Silver 4110 x 2
+  cores: Eight Core x 2
+  threads: 16 x 2
   fpu: "Yes"
-  arch: Broadwellnk
-  ram: DDR4 SO-DIMM 8GB
-- name: RS2818RP+
-  cpu: Intel Atom C3538
-  cores: Quad Core
-  threads: "4"
+  arch: Purley
+  ram: DDR4 ECC RDIMM 32 GB
+- name: FS3400
+  cpu: Intel Xeon D-1541
+  cores: Eight Core
+  threads: "16"
   fpu: "Yes"
-  arch: Denverton
-  ram: DDR4-2133 Non-ECC UDIMM 4GB
-- name: RS818+/RS818RP+
-  cpu: Intel Atom C2538
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: Avoton
-  ram: DDR3 2GB
-- name: DS3018xs
-  cpu: Intel Pentium D1508
-  cores: Dual Core
-  threads: "4"
-  fpu: "Yes"
-  arch: Broadwellnk
-  ram: DDR4 SO-DIMM 8GB
-- name: DS918+
-  cpu: Intel Celeron J3455
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: Apollolake
-  ram: DDR3L SO-DIMM 4GB
-- name: DS718+
-  cpu: Intel Celeron J3455
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: Apollolake
-  ram: DDR3L SO-DIMM 2GB
-- name: DS418play
-  cpu: Intel Celeron J3355
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: Apollolake
-  ram: DDR3L SO-DIMM 2GB
-- name: DS418
-  cpu: Realtek RTD1296
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: rtd1296
-  ram: DDR4 2GB
-- name: DS418j
-  cpu: Realtek RTD1293
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: rtd1296
-  ram: DDR4 1GB
-- name: DS218+
-  cpu: Intel Celeron J3355
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: Apollolake
-  ram: DDR3L SO-DIMM 2GB
-- name: DS218play
-  cpu: Realtek RTD1296
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: rtd1296
-  ram: DDR4 1GB
-- name: DS218
-  cpu: Realtek RTD1296
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: rtd1296
-  ram: DDR4 2GB
-- name: DS218j
-  cpu: Marvell Armada 385 88F6820
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: Armada38x
-  ram: DDR3 512MB
-- name: DS118
-  cpu: Realtek RTD1296
-  cores: Quad Core
-  threads: "4"
-  fpu: "Yes"
-  arch: rtd1296
-  ram: DDR4 1GB
+  arch: Broadwell
+  ram: DDR4 ECC RDIMM 16 GB
 - name: FS3017
   cpu: Intel Xeon E5-2620 v3 x 2
   cores: Six Core x 2
@@ -110,6 +26,230 @@
   fpu: "Yes"
   arch: Broadwell
   ram: DDR4 ECC RDIMM 16 GB
+- name: FS1018
+  cpu: Intel Pentium D1508
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 SO-DIMM 8GB
+- name: SA3600
+  cpu: Intel Xeon D-1567
+  cores: Twelve Core
+  threads: "24"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 ECC RDIMM 16 GB
+- name: SA3400
+  cpu: Intel Xeon D-1541
+  cores: Eight Core
+  threads: "16"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 ECC RDIMM 16 GB
+- name: RS820+/RS820RP+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC 2GB
+- name: DS620slim
+  cpu: Intel Celeron J3355
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS420j
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: DS120j
+  cpu: Marvell A3720
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: armada37xx
+  ram: DDR3 512MB
+- name: RS1619xs+
+  cpu: Intel Xeon D-1527
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC UDIMM 8GB
+- name: RS1219+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2GB
+- name: RS819
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 2GB
+- name: DS2419+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC SO-DIMM 4GB
+- name: DS1819+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC SO-DIMM 4GB
+- name: DS1019+
+  cpu: Intel Celeron J3455
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 8GB
+- name: DS419slim
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: armada38x
+  ram: DDR3L 512 MB
+- name: DS119j
+  cpu: Marvell A3720
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: armada37xx
+  ram: DDR3L 256MB
+- name: DVA3219
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC SO-DIMM 4GB
+- name: RS3618xs
+  cpu: Intel Xeon D-1521
+  cores: Quad Core
+  threads: "8"
+  fpu: "Yes"
+  arch: Broadwell
+  ram: DDR4 ECC UDIMM 8 GB
+- name: RS2818RP+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC UDIMM 4GB
+- name: RS2418+/RS2418RP+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC UDIMM 4GB
+- name: RS818+/RS818RP+
+  cpu: Intel Atom C2538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Avoton
+  ram: DDR3 2GB
+- name: DS3018xs
+  cpu: Intel Pentium D1508
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Broadwellnk
+  ram: DDR4 SO-DIMM 8GB
+- name: DS1618+
+  cpu: Intel Atom C3538
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Denverton
+  ram: DDR4 Non-ECC SO-DIMM 4GB
+- name: DS918+
+  cpu: Intel Celeron J3455
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 4GB
+- name: DS718+
+  cpu: Intel Celeron J3455
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS418
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 2GB
+- name: DS418play
+  cpu: Intel Celeron J3355
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS418j
+  cpu: Realtek RTD1293
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: DS218+
+  cpu: Intel Celeron J3355
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Apollolake
+  ram: DDR3L SO-DIMM 2GB
+- name: DS218
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 2GB
+- name: DS218play
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
+- name: DS218j
+  cpu: Marvell Armada 385 88F6820
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Armada38x
+  ram: DDR3 512MB
+- name: DS118
+  cpu: Realtek RTD1296
+  cores: Quad Core
+  threads: "4"
+  fpu: "Yes"
+  arch: rtd1296
+  ram: DDR4 1GB
 - name: RS18017xs+
   cpu: Intel Xeon D-1531
   cores: Six Core
@@ -229,19 +369,19 @@
   fpu: "Yes"
   arch: Braswell
   ram: DDR3 2 GB
-- name: DS416play
-  cpu: Intel Celeron N3060
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: Braswell
-  ram: DDR3 1 GB
 - name: DS416
   cpu: Annapurna Labs Alpine AL-212
   cores: Dual Core
   threads: "2"
   fpu: "Yes"
   arch: Alpine4k
+  ram: DDR3 1 GB
+- name: DS416play
+  cpu: Intel Celeron N3060
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Braswell
   ram: DDR3 1 GB
 - name: DS416j
   cpu: Marvell Armada 388 88F6828
@@ -271,13 +411,6 @@
   fpu: "Yes"
   arch: Braswell
   ram: DDR3 1 GB
-- name: DS216play
-  cpu: STM STiH412
-  cores: Dual Core
-  threads: "2"
-  fpu: "Yes"
-  arch: Monaco
-  ram: DDR3 1 GB
 - name: DS216
   cpu: Marvell Armada 385 88F6820
   cores: Dual Core
@@ -285,6 +418,13 @@
   fpu: "Yes"
   arch: Armada38x
   ram: DDR3 512 MB
+- name: DS216play
+  cpu: STM STiH412
+  cores: Dual Core
+  threads: "2"
+  fpu: "Yes"
+  arch: Monaco
+  ram: DDR3 1 GB
 - name: DS216j
   cpu: Marvell Armada 385 88F6820
   cores: Dual Core
@@ -488,13 +628,6 @@
   fpu: "Yes"
   arch: Armadaxp
   ram: DDR3 1 GB
-- name: DS214play
-  cpu: Intel Atom CE5335
-  cores: Dual Core
-  threads: "4"
-  fpu: "Yes"
-  arch: Evansport
-  ram: DDR3 1 GB
 - name: DS214
   cpu: Marvell Armada XP MV78230
   cores: Dual Core
@@ -502,6 +635,13 @@
   fpu: "Yes"
   arch: Armadaxp
   ram: DDR3 512 MB
+- name: DS214play
+  cpu: Intel Atom CE5335
+  cores: Dual Core
+  threads: "4"
+  fpu: "Yes"
+  arch: Evansport
+  ram: DDR3 1 GB
 - name: DS214se
   cpu: Marvell Armada 370 88F6707
   cores: Single Core

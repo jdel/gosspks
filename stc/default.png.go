@@ -1,4 +1,4 @@
-package stc
+package stc // import jdel.org/gosspks/stc
 
 // DefaultPackagePng is the base64 encoding of the
 // default package png icon
