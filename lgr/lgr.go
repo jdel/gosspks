@@ -1,4 +1,4 @@
-package lgr
+package lgr // import jdel.org/gosspks/lgr
 
 import (
 	"jdel.org/gosspks/util"

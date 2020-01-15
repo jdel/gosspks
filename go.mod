@@ -19,5 +19,5 @@ require (
 	github.com/spf13/viper v1.5.0
 	golang.org/x/text v0.3.2 // indirect
 	gopkg.in/yaml.v2 v2.2.7
-	jdel.org/go-syno v0.3.0
+	jdel.org/go-syno v0.3.2
 )

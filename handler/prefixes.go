@@ -1,4 +1,4 @@
-package handler
+package handler // import jdel.org/gosspks/handler
 
 import (
 	"net/http"

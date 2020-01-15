@@ -1,41 +1,30 @@
-FROM jdel/alpine:edge
+FROM golang:1.13-alpine3.10 as builder
 
 ENV GOPATH=/go
 ENV PATH=${GOPATH}/bin:${PATH}
 ARG GOSSPKS_VERSION=${GOSSPKS_VERSION:-master}
 ARG GOSSPKS_COMMIT=
 
+COPY . /src
+
+WORKDIR /src
+
+RUN apk add --update curl gcc build-base \
+ && go get -v ./... \
+ && go test -v ./... \
+ && go build -ldflags "-s -w -X jdel.org/gosspks/cfg.Version=${GOSSPKS_VERSION}" \
+ && chmod +x /src/gosspks
+
+FROM jdel/alpine-glibc:3.10
 LABEL maintainer=julien@del-piccolo.com
 
-USER root
+COPY --from=builder /src/gosspks /usr/local/bin/gosspks
 
-RUN apk add --update curl \
- && apk add --virtual build-dependencies go gcc build-base glide git openssh-client \
- && adduser gosspks -D \
- && mkdir -p /home/user/gosspks/packages /home/user/gosspks/cache \
- && chown -R user:user /tmp /home/user \
- && curl -sL https://jdel.org/gosspks/archive/${GOSSPKS_VERSION}.zip -o gosspks.zip \
- && mkdir -p ${GOPATH}/src/github.com/jdel/ \
- && unzip gosspks.zip -d ${GOPATH}/src/github.com/jdel/ \
- && rm -f gosspks.zip \
- && mv ${GOPATH}/src/jdel.org/gosspks-* ${GOPATH}/src/jdel.org/gosspks \
- && go get -v github.com/golang/dep/cmd/dep \
- && cd $GOPATH/src/github.com/golang/dep/cmd/dep \
- && git checkout tags/v0.4.1 && go install \
- && cd ${GOPATH}/src/jdel.org/gosspks/ \
- && dep ensure -v -vendor-only \
- && go build -o /usr/local/bin/gosspks -ldflags "-X jdel.org/gosspks/cfg.Version=${GOSSPKS_VERSION}-${GOSSPKS_COMMIT}" \
- && apk del build-dependencies \
- && rm -rf /var/cache/apk/* \
- && rm -rf /root/.glide/ \
- && rm -rf ${GOPATH}
- 
-USER user
-
-WORKDIR /home/user/
+RUN mkdir /home/user/gosspks \
+ && chown user:user /home/user/gosspks
 
 EXPOSE 8080
 
-VOLUME ["/tmp/", "/home/gosspks/gosspks/packages", "/home/gosspks/gosspks/cache"]
+VOLUME ["/tmp/", "/home/user/gosspks/cache", "/home/user/gosspks/packages"]
  
 CMD ["/usr/local/bin/gosspks"]

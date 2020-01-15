@@ -1,4 +1,4 @@
-package v1
+package v1 // import jdel.org/gosspks/v1
 
 import (
 	"encoding/json"
