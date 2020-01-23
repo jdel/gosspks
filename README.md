@@ -218,7 +218,7 @@ A Docker image is available, you can run the followinf `docker-compose.yml` file
 version: "3.1"
 services:
   gosspks:
-    image: jdel/gosspks:v0.1
+    image: jdel/gosspks:v0.3.1
     container_name: gosspks
     networks:
       - mobynet

@@ -8,6 +8,7 @@ all: clean gosspks x-gosspks docker
 
 docker:
 	@docker build --no-cache -t jdel/gosspks:local --build-arg GOSSPKS_COMMIT="${VERSION}" .
+	@dgoss run jdel/gosspks:local
 	
 gosspks:
 	go build -ldflags "-X jdel.org/gosspks/cfg.Version=${VERSION}"

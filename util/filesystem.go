@@ -3,7 +3,6 @@ package util // import jdel.org/gosspks/util
 import (
 	"os"
 	"runtime"
-	"strings"
 
 	log "github.com/sirupsen/logrus"
 )
@@ -26,11 +25,10 @@ func (s FileInfoBySizeDesc) Less(i, j int) bool {
 	return s[i].Size() > s[j].Size()
 }
 
-// WhereAmI returns the current source
-// file name from the root of the project
+// WhereAmI returns the current source file name 
 func WhereAmI() string {
 	_, filename, _, _ := runtime.Caller(1)
-	return filename[strings.Index(filename, "gosspks")+8:]
+	return filename
 }
 
 // CreateDir Creates a directory if it doesn't exist

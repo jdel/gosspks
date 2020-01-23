@@ -1,0 +1,32 @@
+file:
+  /home/user/gosspks/cache:
+    exists: true
+    mode: "2755"
+    size: 4096
+    owner: user
+    group: user
+    filetype: directory
+    contains: []
+  /home/user/gosspks/gosspks.yml:
+    exists: true
+    mode: "0644"
+    size: 361
+    owner: user
+    group: user
+    filetype: file
+    contains: []
+  /home/user/gosspks/packages:
+    exists: true
+    mode: "2755"
+    size: 4096
+    owner: user
+    group: user
+    filetype: directory
+    contains: []
+  /usr/local/bin/gosspks:
+    exists: true
+    mode: "0755"
+    owner: root
+    group: root
+    filetype: file
+    contains: []
